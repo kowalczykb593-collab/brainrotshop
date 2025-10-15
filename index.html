@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Steal a Brainrot SKLEP — Dark</title>
+<title>Steal a Brainrot SKLEP</title>
 
 <!-- Material icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
@@ -141,7 +141,7 @@
   <div class="controls">
     <button id="navHome" class="btn ghost">Strona główna</button>
     <button id="navOrder" class="btn ghost">Zamów</button>
-    <button id="navAdmin" class="btn">Panel admin</button>
+    <button id="navAdmin" class="btn">Logowanie</button>
   </div>
 </header>
 
@@ -154,7 +154,7 @@
         <div class="hero-left">
           <div>
             <h2>Dostępne brainroty</h2>
-            <p class="muted">Wybierz z listy i złóż zamówienie. Brainroty zarządzane przez admina.</p>
+            <p class="muted">Wybierz z listy i złóż zamówienie</p>
           </div>
         </div>
         <div class="row">
@@ -172,10 +172,10 @@
       <div style="max-width:720px; margin-top:10px;">
         <label for="selBrain">Wybierz brainrot</label>
         <select id="selBrain"></select>
-        <label for="contact">Twój kontakt (Discord#1234 / email)</label>
+        <label for="contact">Twój kontakt (Discord / Instagram / email)</label>
         <input id="contact" type="text" placeholder="np. User#1234 / user@mail.com" />
         <div style="margin-top:12px;" class="row">
-          <button id="placeOrder" class="btn">Wyślij zamówienie</button>
+          <button id="placeOrder" class="btn">Złóż zamówienie</button>
           <button id="backHomeFromOrder" class="btn ghost">Anuluj</button>
         </div>
         <p id="orderMsg" class="muted" style="margin-top:10px"></p>
@@ -186,7 +186,7 @@
     <section id="login" class="view card">
       <h2>Panel administratora — logowanie</h2>
       <div style="max-width:440px; margin-top:10px;">
-        <label>Login (bartlomiejk lub email)</label>
+        <label>Login</label>
         <input id="adminLogin" type="text" placeholder="bartlomiejk" />
         <label>Hasło</label>
         <input id="adminPass" type="password" placeholder="Ewcia*1988" />
@@ -194,7 +194,7 @@
           <button id="adminSignIn" class="btn">Zaloguj</button>
           <button id="backToHome" class="btn ghost">Powrót</button>
         </div>
-        <p class="muted" style="margin-top:8px">W aplikacji admina użyj konta utworzonego w Firebase (np. bartlomiejk@example.com / Ewcia*1988).</p>
+        <p class="muted" style="margin-top:8px">Administratorzy: Bartłomiej, Szymon</p>
       </div>
     </section>
 
@@ -234,7 +234,7 @@
 </main>
 
 <footer>
-  <div class="muted">Demo • Pamiętaj o regułach Firestore i backendzie dla webhooks (CORS).</div>
+  <div class="muted">Steal a Brainrot SKLEP</div>
 </footer>
 
 <!-- Firebase modular SDK (v10) -->
