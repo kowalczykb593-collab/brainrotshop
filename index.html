@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Steal a Brainrot SKLEP</title>
 
-<!-- Material icons -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
-
-<!-- Google font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -21,7 +18,6 @@
     --accent-2: #60a5fa;
     --danger: #ff6b6b;
     --radius: 14px;
-    --glass: rgba(255,255,255,0.03);
   }
   *{box-sizing:border-box}
   html,body{height:100%;}
@@ -30,114 +26,45 @@
     font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     background: linear-gradient(180deg, #060814 0%, var(--bg) 100%);
     color: #e6eef8;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    display:flex;
-    flex-direction:column;
-    min-height:100vh;
+    display:flex; flex-direction:column; min-height:100vh;
   }
-
-  header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:16px 20px;
-    background: linear-gradient(90deg, rgba(59,130,246,0.12), rgba(96,165,250,0.06));
-    border-bottom:1px solid rgba(255,255,255,0.02);
-    backdrop-filter: blur(6px);
-  }
-  .brand { display:flex; gap:12px; align-items:center; }
-  .logo{
-    width:44px; height:44px; border-radius:10px;
-    background: linear-gradient(135deg,var(--accent),var(--accent-2));
-    display:flex; align-items:center; justify-content:center; font-weight:700; color:white; font-size:18px;
-    box-shadow: 0 6px 22px rgba(59,130,246,0.18);
-  }
-  h1{ margin:0; font-size:18px; letter-spacing:0.2px; }
-  header .controls { display:flex; gap:10px; align-items:center; }
-
-  main{ flex:1; display:flex; justify-content:center; padding:28px 16px; }
-  .container{
-    width:100%;
-    max-width:1100px;
-    display:grid;
-    grid-template-columns: 1fr;
-    gap:18px;
-  }
-
-  .card{
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.03);
-    padding:14px;
-    border-radius: var(--radius);
-    box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-  }
-
-  .hero { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:18px; }
-  .hero-left { display:flex; gap:14px; align-items:center; flex:1; min-width:320px; }
-  .hero h2 { margin:0; font-size:22px; }
-  .hero p { margin:0; color:var(--muted); }
-
-  .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
-
-  .brain-card{
-    padding:14px; border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
-    border:1px solid rgba(255,255,255,0.02);
-    display:flex; flex-direction:column; gap:8px;
-    transition: transform .18s ease, box-shadow .18s ease;
-  }
-  .brain-card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.6); }
-  .brain-name{ font-weight:600; font-size:16px; }
-  .brain-desc { color:var(--muted); font-size:13px; min-height:38px; }
-
-  .actions { display:flex; gap:8px; margin-top:8px; }
-  .btn { background:var(--accent); color:white; border:none; padding:8px 12px; border-radius:10px; cursor:pointer; font-weight:600; }
-  .btn.ghost { background:transparent; color:var(--accent-2); border:1px solid rgba(96,165,250,0.12); }
-  .btn.danger { background:linear-gradient(90deg,var(--danger),#ff8a8a); color:white; }
-
-  /* views */
-  .view { display:none; opacity:0; transform: translateY(6px); transition: opacity .22s ease, transform .22s ease; }
-  .view.active { display:block; opacity:1; transform:none; }
-
-  /* forms */
-  label{ display:block; color:var(--muted); font-size:13px; margin-top:8px; }
-  input[type="text"], textarea, select {
-    margin-top:6px;
-    width:100%;
-    padding:10px 12px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.03);
-    background: rgba(255,255,255,0.01);
-    color: #e9f2ff;
-    font-size:14px;
-  }
-  textarea { min-height:90px; resize:vertical; }
-
-  .row { display:flex; gap:12px; align-items:center; }
-  .muted { color:var(--muted); font-size:13px; }
-  footer { text-align:center; color:var(--muted); padding:18px 12px; font-size:13px; }
-
-  /* admin area layout */
-  .admin-grid { display:grid; grid-template-columns: 360px 1fr; gap:16px; }
-  .orders-list { display:grid; gap:10px; }
-
-  /* small screens */
-  @media (max-width:880px){
-    .hero{ flex-direction:column; align-items:flex-start; gap:10px; }
-    .admin-grid{ grid-template-columns: 1fr; }
-  }
+  header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:linear-gradient(90deg,rgba(59,130,246,0.12),rgba(96,165,250,0.06));border-bottom:1px solid rgba(255,255,255,0.02);backdrop-filter:blur(6px);}
+  .brand{display:flex;gap:12px;align-items:center;}
+  .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px;box-shadow:0 6px 22px rgba(59,130,246,0.18);}
+  h1{margin:0;font-size:18px;}
+  header .controls{display:flex;gap:10px;align-items:center;}
+  main{flex:1;display:flex;justify-content:center;padding:28px 16px;}
+  .container{width:100%;max-width:1100px;display:grid;grid-template-columns:1fr;gap:18px;}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:14px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6);}
+  .hero{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px;}
+  .hero-left{display:flex;gap:14px;align-items:center;flex:1;min-width:320px;}
+  .hero h2{margin:0;font-size:22px;}
+  .hero p{margin:0;color:var(--muted);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .brain-card{padding:14px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.02);display:flex;flex-direction:column;gap:8px;transition:transform .18s ease,box-shadow .18s ease;}
+  .brain-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,0.6);}
+  .brain-name{font-weight:600;font-size:16px;}
+  .brain-desc{color:var(--muted);font-size:13px;min-height:38px;}
+  .actions{display:flex;gap:8px;margin-top:8px;}
+  .btn{background:var(--accent);color:white;border:none;padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:600;}
+  .btn.ghost{background:transparent;color:var(--accent-2);border:1px solid rgba(96,165,250,0.12);}
+  .btn.danger{background:linear-gradient(90deg,var(--danger),#ff8a8a);color:white;}
+  .view{display:none;opacity:0;transform:translateY(6px);transition:opacity .22s ease,transform .22s ease;}
+  .view.active{display:block;opacity:1;transform:none;}
+  label{display:block;color:var(--muted);font-size:13px;margin-top:8px;}
+  input[type="text"],textarea,select{margin-top:6px;width:100%;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:rgba(255,255,255,0.01);color:#e9f2ff;font-size:14px;}
+  textarea{min-height:90px;resize:vertical;}
+  .row{display:flex;gap:12px;align-items:center;}
+  .muted{color:var(--muted);font-size:13px;}
+  footer{text-align:center;color:var(--muted);padding:18px 12px;font-size:13px;}
+  .admin-grid{display:grid;grid-template-columns:360px 1fr;gap:16px;}
+  .orders-list{display:grid;gap:10px;}
+  @media(max-width:880px){.hero{flex-direction:column;align-items:flex-start;gap:10px;}.admin-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
 <header>
-  <div class="brand">
-    <div class="logo">BR</div>
-    <div>
-      <h1>Steal a Brainrot</h1>
-      <div class="muted" style="font-size:13px">Sklep • Dark UI</div>
-    </div>
-  </div>
-
+  <div class="brand"><div class="logo">BR</div><div><h1>Steal a Brainrot</h1><div class="muted" style="font-size:13px">Sklep</div></div></div>
   <div class="controls">
     <button id="navHome" class="btn ghost">Strona główna</button>
     <button id="navOrder" class="btn ghost">Zamów</button>
@@ -147,81 +74,55 @@
 
 <main>
   <div class="container">
-
-    <!-- HOME VIEW -->
     <section id="home" class="view active card">
-      <div class="hero">
-        <div class="hero-left">
-          <div>
-            <h2>Dostępne brainroty</h2>
-            <p class="muted">Wybierz z listy i złóż zamówienie</p>
-          </div>
-        </div>
-        <div class="row">
-          <button id="refreshBtn" class="btn ghost">Odśwież</button>
-          <button id="toOrderBtn" class="btn">Zamów</button>
-        </div>
-      </div>
-
+      <div class="hero"><div class="hero-left"><div><h2>Dostępne brainroty</h2><p class="muted">Wybierz z listy i złóż zamówienie</p></div></div>
+      <div class="row"><button id="refreshBtn" class="btn ghost">Odśwież</button><button id="toOrderBtn" class="btn">Zamów</button></div></div>
       <div id="brainGrid" class="grid" style="margin-top:12px"></div>
     </section>
 
-    <!-- ORDER VIEW -->
     <section id="order" class="view card">
       <h2>Zamówienie</h2>
-      <div style="max-width:720px; margin-top:10px;">
-        <label for="selBrain">Wybierz brainrot</label>
-        <select id="selBrain"></select>
-        <label for="contact">Twój kontakt (Discord / Instagram / email)</label>
-        <input id="contact" type="text" placeholder="np. User#1234 / user@mail.com" />
-        <div style="margin-top:12px;" class="row">
-          <button id="placeOrder" class="btn">Złóż zamówienie</button>
-          <button id="backHomeFromOrder" class="btn ghost">Anuluj</button>
-        </div>
+      <div style="max-width:720px;margin-top:10px;">
+        <label for="selBrain">Wybierz brainrot</label><select id="selBrain"></select>
+        <label for="contact">Twój kontakt</label><input id="contact" type="text" placeholder="Discord / e-mail" />
+        <div style="margin-top:12px;" class="row"><button id="placeOrder" class="btn">Złóż zamówienie</button><button id="backHomeFromOrder" class="btn ghost">Anuluj</button></div>
         <p id="orderMsg" class="muted" style="margin-top:10px"></p>
       </div>
     </section>
 
-    <!-- LOGIN VIEW -->
     <section id="login" class="view card">
       <h2>Panel administratora — logowanie</h2>
-      <div style="max-width:440px; margin-top:10px;">
-        <label>Login</label>
-        <input id="adminLogin" type="text" placeholder="Login" />
-        <label>Hasło</label>
-        <input id="adminPass" type="password" placeholder="Hasło" />
-        <div style="margin-top:12px" class="row">
-          <button id="adminSignIn" class="btn">Zaloguj</button>
-          <button id="backToHome" class="btn ghost">Powrót</button>
-        </div>
+      <div style="max-width:440px;margin-top:10px;">
+        <label>Login</label><input id="adminLogin" type="text" placeholder="Login" />
+        <label>Hasło</label><input id="adminPass" type="password" placeholder="Hasło" />
+        <div style="margin-top:12px" class="row"><button id="adminSignIn" class="btn">Zaloguj</button><button id="backToHome" class="btn ghost">Powrót</button></div>
         <p class="muted" style="margin-top:8px">Administratorzy: Bartłomiej, Szymon</p>
       </div>
     </section>
 
-    <!-- ADMIN VIEW -->
+    <!-- 🔧 ADMIN PANEL -->
     <section id="admin" class="view card">
       <h2>Panel admina</h2>
       <div style="margin-top:12px" class="admin-grid">
         <div>
           <div class="card">
             <h3>Dodaj brainrota</h3>
-            <label>Nazwa</label>
-            <input id="newName" />
-            <label>Opis</label>
-            <textarea id="newDesc"></textarea>
-            <div style="margin-top:10px" class="row">
-              <button id="addBrain" class="btn">Dodaj</button>
-              <button id="logout" class="btn ghost">Wyloguj</button>
-            </div>
+            <label>Nazwa</label><input id="newName" placeholder="np. Strawberry Elephant" />
+            <label>Opis</label><textarea id="newDesc" placeholder="Opis brainrota"></textarea>
+            <label>Cena (PLN)</label><input id="newPrice" type="text" placeholder="np. 50zł" />
+            <label>Przychód</label><input id="newRevenue" type="text" placeholder="np. 100mln/s" />
+            <label>Rodzaj</label><input id="newType" type="text" placeholder="np. Secret, Diamond" />
+            <label>Mutacje</label><input id="newMutations" type="text" placeholder="np. Ying Yang" />
+            <label>Inne funkcje</label><textarea id="newFeatures" placeholder="np. Rytuały"></textarea>
+            <div style="margin-top:10px" class="row"><button id="addBrain" class="btn">Dodaj</button><button id="logout" class="btn ghost">Wyloguj</button></div>
           </div>
         </div>
 
         <div>
           <div class="card" style="margin-bottom:12px;">
-            <h3>Lista brainrotów (kliknij Usuń aby usunąć)</h3>
+            <h3>Lista brainrotów</h3>
             <div id="adminList" class="grid" style="margin-top:10px"></div>
           </div>
-
           <div class="card">
             <h3>Zamówienia</h3>
             <div id="orders" class="orders-list" style="margin-top:10px"></div>
@@ -229,22 +130,16 @@
         </div>
       </div>
     </section>
-
   </div>
 </main>
 
-<footer>
-  <div class="muted">Steal a Brainrot SKLEP</div>
-</footer>
+<footer><div class="muted">Steal a Brainrot SKLEP</div></footer>
 
-<!-- Firebase modular SDK (v10) -->
 <script type="module">
-/* ===================== FIREBASE CONFIG & INIT ===================== */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-/* --- Twój firebaseConfig (użytkownik wkleił) --- */
 const firebaseConfig = {
   apiKey: "AIzaSyDywyM9lSlAd--NZTXoRV-xpi4AtZAu9Ys",
   authDomain: "brainrotshop-5244e.firebaseapp.com",
@@ -259,7 +154,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-/* ===================== SELECTORS ===================== */
 const views = {
   home: document.getElementById('home'),
   order: document.getElementById('order'),
@@ -270,19 +164,19 @@ const brainGrid = document.getElementById('brainGrid');
 const selBrain = document.getElementById('selBrain');
 const contactInput = document.getElementById('contact');
 const orderMsg = document.getElementById('orderMsg');
-
 const adminLoginInput = document.getElementById('adminLogin');
 const adminPassInput = document.getElementById('adminPass');
-
 const adminList = document.getElementById('adminList');
 const ordersList = document.getElementById('orders');
-
 const newName = document.getElementById('newName');
 const newDesc = document.getElementById('newDesc');
+const newPrice = document.getElementById('newPrice');
+const newRevenue = document.getElementById('newRevenue');
+const newType = document.getElementById('newType');
+const newMutations = document.getElementById('newMutations');
+const newFeatures = document.getElementById('newFeatures');
+const webhookURL = "https://discord.com/api/webhooks/..."; // <-- tu wklej swój webhook
 
-const webhookURL = "https://discord.com/api/webhooks/1427401163975819294/eiX-72bBDnhQkFTpJsR8OqaeaCLxooBDojnhiQxijLwxXxI5yIJERgatMC0aUAB-eT8I";
-
-/* ===================== NAVIGATION ===================== */
 document.getElementById('navHome').onclick = () => show('home');
 document.getElementById('navOrder').onclick = () => show('order');
 document.getElementById('navAdmin').onclick = () => show('login');
@@ -294,225 +188,92 @@ document.getElementById('adminSignIn').onclick = adminSignIn;
 document.getElementById('addBrain').onclick = addBrainrot;
 document.getElementById('logout').onclick = () => signOut(auth);
 
-/* show view helper */
-function show(name){
-  Object.values(views).forEach(v => { v.classList.remove('active'); });
-  views[name].classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+function show(name){ Object.values(views).forEach(v => v.classList.remove('active')); views[name].classList.add('active'); window.scrollTo({top:0,behavior:'smooth'}); }
 
-/* ===================== BRAINROTS (LISTENERS) ===================== */
-let brainUnsub = null;
+function escapeHtml(s){return s?String(s).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m])):'';}
+
 function loadBrainrots(){
-  // realtime listener
-  const q = query(collection(db, 'brainrots'), orderBy('name'));
-  if(brainUnsub) brainUnsub(); // remove old
-  brainUnsub = onSnapshot(q, snap => {
-    brainGrid.innerHTML = '';
-    selBrain.innerHTML = '';
-    snap.forEach(docu => {
+  const q = query(collection(db,'brainrots'),orderBy('name'));
+  onSnapshot(q,snap=>{
+    brainGrid.innerHTML=''; selBrain.innerHTML='';
+    snap.forEach(docu=>{
       const d = docu.data();
-      // HOME card
-      const card = document.createElement('div');
-      card.className = 'brain-card';
-      card.innerHTML = `<div class="brain-name">${escapeHtml(d.name)}</div>
-                        <div class="brain-desc">${escapeHtml(d.description||'')}</div>
-                        <div class="actions">
-                          <button class="btn" data-name="${escapeHtml(d.name)}">Zamów</button>
-                        </div>`;
-      card.querySelector('button').onclick = (e) => {
-        const nm = e.currentTarget.dataset.name;
-        selBrain.value = nm;
-        show('order');
-      };
+      const card=document.createElement('div');
+      card.className='brain-card';
+      card.innerHTML=`<div class="brain-name">${escapeHtml(d.name)}</div>
+        <div class="brain-desc">${escapeHtml(d.description||'')}</div>
+        <div class="muted">💰 ${escapeHtml(d.price||'-')} zł</div>
+        <div class="actions"><button class="btn" data-name="${escapeHtml(d.name)}">Zamów</button></div>`;
+      card.querySelector('button').onclick=(e)=>{selBrain.value=e.currentTarget.dataset.name;show('order');};
       brainGrid.appendChild(card);
-
-      // select option
-      const opt = document.createElement('option');
-      opt.value = d.name; opt.textContent = d.name;
-      selBrain.appendChild(opt);
+      const opt=document.createElement('option');opt.value=d.name;opt.textContent=d.name;selBrain.appendChild(opt);
     });
-  }, err => {
-    console.error('brain snapshot error', err);
   });
 }
 loadBrainrots();
 
-/* ===================== ORDERS ===================== */
-document.getElementById('placeOrder').onclick = async () => {
-  const chosen = selBrain.value;
-  const contact = contactInput.value.trim();
-  if(!chosen) return alert('Wybierz brainrota.');
-  if(!contact) return alert('Podaj kontakt.');
-
-  orderMsg.textContent = 'Wysyłanie...';
-  try {
-    await addDoc(collection(db, 'orders'), {
-      brainrotName: chosen,
-      contact,
-      createdAt: Date.now()
-    });
-
-    // try webhook (may fail CORS)
-    try {
-      const res = await fetch(webhookURL, {
-        method:'POST',
-        headers:{ 'Content-Type':'application/json' },
-        body: JSON.stringify({ content: `📩 Nowe zamówienie\nBrainrot: ${chosen}\nKontakt: ${contact}` })
-      });
-      if(!res.ok) throw new Error('Webhook status ' + res.status);
-      orderMsg.textContent = 'Zamówienie wysłane (webhook ok).';
-    } catch (e) {
-      console.warn('Webhook failed (likely CORS):', e);
-      orderMsg.textContent = 'Zamówienie zapisane. (webhook z przeglądarki może być zablokowany przez CORS)';
-    }
-
-    contactInput.value = '';
-    setTimeout(() => show('home'), 700);
-  } catch (err) {
-    console.error(err);
-    orderMsg.textContent = 'Błąd: ' + (err.message || err);
-  }
+document.getElementById('placeOrder').onclick = async ()=>{
+  const chosen=selBrain.value,contact=contactInput.value.trim();
+  if(!chosen)return alert('Wybierz brainrota.');
+  if(!contact)return alert('Podaj kontakt.');
+  orderMsg.textContent='Wysyłanie...';
+  await addDoc(collection(db,'orders'),{brainrotName:chosen,contact,createdAt:Date.now()});
+  contactInput.value=''; orderMsg.textContent='Zamówienie zapisane!'; setTimeout(()=>show('home'),700);
 };
 
-/* ===================== ADMIN AUTH ===================== */
 async function adminSignIn(){
-  let login = adminLoginInput.value.trim();
-  const pass = adminPassInput.value;
-  if(!login || !pass) return alert('Wpisz login i hasło.');
-  if(!login.includes('@')) login = login + '@example.com';
-  try {
-    await signInWithEmailAndPassword(auth, login, pass);
-    adminLoginInput.value = ''; adminPassInput.value = '';
-    // onAuthStateChanged will switch view
-  } catch (e) {
-    alert('Błąd logowania: ' + e.message);
-  }
+  let login=adminLoginInput.value.trim(); const pass=adminPassInput.value;
+  if(!login||!pass)return alert('Wpisz login i hasło.');
+  if(!login.includes('@'))login=login+'@example.com';
+  try{await signInWithEmailAndPassword(auth,login,pass);}catch(e){alert('Błąd logowania: '+e.message);}
 }
+onAuthStateChanged(auth,user=>{if(user){show('admin');startAdminListeners();}else{show('home');}});
 
-/* observe auth to enable admin view */
-onAuthStateChanged(auth, user => {
-  if(user){
-    show('admin');
-    startAdminListeners();
-  } else {
-    show('home');
-    stopAdminListeners();
-  }
-});
-
-/* ===================== ADMIN LISTENERS (brainrots + orders) ===================== */
-let adminBrainUnsub = null;
-let ordersUnsub = null;
 function startAdminListeners(){
-  const qB = query(collection(db, 'brainrots'), orderBy('createdAt'));
-  if(adminBrainUnsub) adminBrainUnsub();
-  adminBrainUnsub = onSnapshot(qB, snap => {
-    adminList.innerHTML = '';
-    snap.forEach(d => {
-      const data = d.data();
-      const card = document.createElement('div');
-      card.className = 'brain-card';
-      card.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center">
-                          <div><strong>${escapeHtml(data.name)}</strong><div class="muted">${escapeHtml(data.description||'')}</div></div>
-                          <div><button class="btn danger small">Usuń</button></div>
-                        </div>`;
-      card.querySelector('button').onclick = async () => {
-        if(!confirm('Na pewno usunąć brainrota?')) return;
-        try { await deleteDoc(doc(db, 'brainrots', d.id)); } catch(err){ alert('Błąd: ' + err.message); }
-      };
+  const qB=query(collection(db,'brainrots'),orderBy('createdAt'));
+  onSnapshot(qB,snap=>{
+    adminList.innerHTML='';
+    snap.forEach(d=>{
+      const data=d.data();
+      const card=document.createElement('div');
+      card.className='brain-card';
+      card.innerHTML=`
+        <div>
+          <strong>${escapeHtml(data.name)}</strong>
+          <div class="muted">${escapeHtml(data.description||'')}</div>
+          <div class="muted">💰 Cena: ${escapeHtml(data.price||'-')} zł</div>
+          <div class="muted">📈 Przychód: ${escapeHtml(data.revenue||'-')}</div>
+          <div class="muted">🧬 Rodzaj: ${escapeHtml(data.type||'-')}</div>
+          <div class="muted">⚙️ Mutacje: ${escapeHtml(data.mutations||'-')}</div>
+          <div class="muted">✨ Inne: ${escapeHtml(data.features||'-')}</div>
+        </div>
+        <div style="margin-top:8px;"><button class="btn danger small">Usuń</button></div>`;
+      card.querySelector('button').onclick=async()=>await deleteDoc(doc(db,'brainrots',d.id));
       adminList.appendChild(card);
     });
   });
-
-  const qO = query(collection(db, 'orders'), orderBy('createdAt'));
-  if(ordersUnsub) ordersUnsub();
-  ordersUnsub = onSnapshot(qO, snap => {
-    ordersList.innerHTML = '';
-    snap.forEach(d => {
-      const ord = d.data();
-      const el = document.createElement('div');
-      el.className = 'card';
-      el.style.display = 'flex';
-      el.style.justifyContent = 'space-between';
-      el.style.alignItems = 'center';
-      el.innerHTML = `<div><strong>${escapeHtml(ord.brainrotName)}</strong><div class="muted">${escapeHtml(ord.contact)}</div></div>
-                      <div class="muted">${new Date(ord.createdAt).toLocaleString()}</div>`;
+  const qO=query(collection(db,'orders'),orderBy('createdAt','desc'));
+  onSnapshot(qO,snap=>{
+    ordersList.innerHTML='';
+    snap.forEach(d=>{
+      const o=d.data();
+      const el=document.createElement('div');
+      el.className='brain-card';
+      el.innerHTML=`<strong>${escapeHtml(o.brainrotName)}</strong><div class="muted">${escapeHtml(o.contact)}</div>`;
       ordersList.appendChild(el);
     });
   });
 }
 
-function stopAdminListeners(){
-  if(adminBrainUnsub) { adminBrainUnsub(); adminBrainUnsub = null; }
-  if(ordersUnsub) { ordersUnsub(); ordersUnsub = null; }
-}
-
-/* ===================== ADD BRAINROT ===================== */
 async function addBrainrot(){
-  const name = newName.value.trim();
-  const desc = newDesc.value.trim();
-  if(!name) return alert('Podaj nazwę brainrota.');
+  const name=newName.value.trim(),desc=newDesc.value.trim(),price=newPrice.value.trim(),revenue=newRevenue.value.trim(),type=newType.value.trim(),mutations=newMutations.value.trim(),features=newFeatures.value.trim();
+  if(!name)return alert('Podaj nazwę brainrota.');
   try{
-    await addDoc(collection(db, 'brainrots'), { name, description: desc, createdAt: Date.now() });
-    newName.value = ''; newDesc.value = '';
-  } catch(e){
-    alert('Błąd dodawania: ' + (e.message || e));
-  }
+    await addDoc(collection(db,'brainrots'),{name,description:desc,price,revenue,type,mutations,features,createdAt:Date.now()});
+    [newName,newDesc,newPrice,newRevenue,newType,newMutations,newFeatures].forEach(el=>el.value='');
+  }catch(e){alert('Błąd dodawania: '+(e.message||e));}
 }
-
-/* ===================== UTIL ===================== */
-function escapeHtml(s){
-  if(!s) return '';
-  return String(s).replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-}
-
-/* ===================== INITIAL VIEW ===================== */
-show('home');
-
 </script>
-
-<!-- ======================================
-IMPORTANT NOTES (CORS & SECURITY)
-======================================
-1) DISCORD WEBHOOK & CORS
-   - Discord webhook calls from the browser often fail due to CORS.
-   - If webhook fetch fails with a CORS error, create a small proxy:
-     a) Node/Express: Accepts POST { content } and forwards to Discord webhook.
-     b) Firebase Cloud Function: same idea (server-side call => no CORS).
-   - Example Express snippet (Node 18+):
-       import express from 'express';
-       import fetch from 'node-fetch';
-       const app = express(); app.use(express.json());
-       app.post('/api/webhook', async (req,res) => {
-         const { content } = req.body;
-         const r = await fetch('<YOUR_WEBHOOK_URL>', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ content })});
-         const text = await r.text();
-         res.status(r.status).send(text);
-       });
-
-2) FIRESTORE RULES (recommendation)
-   - Limit writes to `brainrots` only to admin:
-     rules_version = '2';
-     service cloud.firestore {
-       match /databases/{database}/documents {
-         match /brainrots/{id} {
-           allow read: if true;
-           allow write: if request.auth != null && request.auth.token.email == 'bartlomiejk@example.com';
-         }
-         match /orders/{id} {
-           allow create: if true;
-           allow read: if request.auth != null && request.auth.token.email == 'bartlomiejk@example.com';
-         }
-       }
-     }
-
-3) ADMIN CREDENTIALS
-   - Create admin user in Firebase Authentication (email/password):
-     email: bartlomiejk@example.com
-     password: Ewcia*1988
-============================================================== -->
-
 </body>
 </html>
 
